@@ -1,27 +1,22 @@
 * {
-  box-sizing: border-box;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
-  min-width: none;
+	box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
+h1 {
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.component-content {
+	height: 60vh !important;
 }
 
-ul,
-ol {
-  list-style: none;
+.component-buttons {
+	padding: 2rem;
+	height: 20vh !important;
+}
+
+
+.component-buttons > * + * {
+	margin-left: 1rem;
 }

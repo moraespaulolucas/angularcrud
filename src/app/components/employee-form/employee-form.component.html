@@ -1,9 +1,38 @@
-<form #form="ngForm" (ngSubmit)="addEmployee()">
-	<label for="name">Nome:</label>
-	<input type="text" name="name" id="name" [(ngModel)]="addEmployeeRequest.name" />
-	<label for="age">Idade:</label>
-	<input type="number" min="0" name="age" id="age" [(ngModel)]="addEmployeeRequest.age" />
-	<label for="department">Setor:</label>
-	<input type="text" name="department" id="department" [(ngModel)]="addEmployeeRequest.department" />
-    <button type="submit">Salvar</button>
-</form>
+<div class="component-content">
+	<form #form="ngForm" (ngSubmit)="addEmployee()">
+		<div class="mb-3">
+			<label for="name" class="form-label">Nome:</label>
+			<input
+				type="text"
+				class="form-control"
+				name="name"
+				id="name"
+				[(ngModel)]="addEmployeeRequest.name" />
+		</div>
+		<div class="mb-3">
+			<label for="age" class="form-label">Idade:</label>
+
+			<input
+				type="number"
+				min="0"
+				name="age"
+				class="form-control"
+				id="age"
+				[(ngModel)]="addEmployeeRequest.age" />
+		</div>
+		<div class="mb-3">
+			<label for="department" class="form-label">Setor:</label>
+
+			<input
+				type="text"
+				name="department"
+				class="form-control"
+				id="department"
+				[(ngModel)]="addEmployeeRequest.department" />
+		</div>
+		<div class="component-buttons text-center">
+			<button class="btn btn-success" type="submit">Salvar</button>
+			<button class="btn btn-outline-danger" type="button" (click)="cancel()">Cancelar</button>
+		</div>
+	</form>
+</div>

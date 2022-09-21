@@ -1,16 +1,48 @@
-<form #form="ngForm" (ngSubmit)="updateEmployee()">
-	<label for="id">ID:</label>
-	<input type="number" name="id" id="id" readonly [(ngModel)]="updateEmployeeRequest.id" />
-	<label for="name">Nome:</label>
-	<input type="text" name="name" id="name" [(ngModel)]="updateEmployeeRequest.name" />
-	<label for="age">Idade:</label>
-	<input type="number" min="0" name="age" id="age" [(ngModel)]="updateEmployeeRequest.age" />
-	<label for="department">Setor:</label>
-	<input
-		type="text"
-		name="department"
-		id="department"
-		[(ngModel)]="updateEmployeeRequest.department" />
-	<button type="submit">Salvar</button>
-	<button type="button" (click)="deleteEmployee()">Excluir</button>
-</form>
+<div class="component-content">
+	<form #form="ngForm" (ngSubmit)="updateEmployee()">
+		<div class="mb-3">
+			<label for="id" class="form-label">ID:</label>
+			<input
+				type="number"
+				name="id"
+				id="id"
+				class="form-control"
+				disabled
+				[(ngModel)]="updateEmployeeRequest.id" />
+		</div>
+		<div class="mb-3">
+			<label for="name" class="form-label">Nome:</label>
+			<input
+				type="text"
+				class="form-control"
+				name="name"
+				id="name"
+				[(ngModel)]="updateEmployeeRequest.name" />
+		</div>
+		<div class="mb-3">
+			<label for="age" class="form-label">Idade:</label>
+
+			<input
+				type="number"
+				min="0"
+				name="age"
+				class="form-control"
+				id="age"
+				[(ngModel)]="updateEmployeeRequest.age" />
+		</div>
+		<div class="mb-3">
+			<label for="department" class="form-label">Setor:</label>
+
+			<input
+				type="text"
+				name="department"
+				class="form-control"
+				id="department"
+				[(ngModel)]="updateEmployeeRequest.department" />
+		</div>
+		<div class="component-buttons text-center">
+			<button class="btn btn-success" type="submit">Salvar</button>
+			<button class="btn btn-outline-danger" type="button" (click)="deleteEmployee()">Excluir</button>
+		</div>
+	</form>
+</div>

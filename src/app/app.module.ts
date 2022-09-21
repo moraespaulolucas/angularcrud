@@ -15,7 +15,6 @@ import { AppRoutingModule } from "./app-routing.module"
 		EmployeeListComponent,
 		EmployeeFormComponent,
 		EmployeeFormEditComponent,
-    
 	],
 	imports: [BrowserModule, HttpClientModule, FormsModule, AppRoutingModule],
 	providers: [],
