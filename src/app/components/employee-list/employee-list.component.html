@@ -1,0 +1,26 @@
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>NOME</th>
+				<th>IDADE</th>
+				<th>DEPARTAMENTO</th>
+				<th></th>
+			</tr>
+		</thead>
+		<ng-container *ngIf="employees.length">
+			<tr *ngFor="let employee of employees">
+				<td>{{ employee.id }}</td>
+				<td>{{ employee.name }}</td>
+				<td>{{ employee.age }}</td>
+				<td>{{ employee.department }}</td>
+				<td><a [routerLink]="['edit', employee.id]">edit</a></td>
+			</tr>
+		</ng-container>
+		<tr>
+			<td colspan="5" *ngIf="!employees.length">Nenhum funcionário encontrado</td>
+		</tr>
+	</table>
+</div>
+<button (click)="navigateTo(['add'])">Adicionar Funcionário</button>

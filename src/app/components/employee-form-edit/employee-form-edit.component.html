@@ -1,0 +1,16 @@
+<form #form="ngForm" (ngSubmit)="updateEmployee()">
+	<label for="id">ID:</label>
+	<input type="number" name="id" id="id" readonly [(ngModel)]="updateEmployeeRequest.id" />
+	<label for="name">Nome:</label>
+	<input type="text" name="name" id="name" [(ngModel)]="updateEmployeeRequest.name" />
+	<label for="age">Idade:</label>
+	<input type="number" min="0" name="age" id="age" [(ngModel)]="updateEmployeeRequest.age" />
+	<label for="department">Setor:</label>
+	<input
+		type="text"
+		name="department"
+		id="department"
+		[(ngModel)]="updateEmployeeRequest.department" />
+	<button type="submit">Salvar</button>
+	<button type="button" (click)="deleteEmployee()">Excluir</button>
+</form>

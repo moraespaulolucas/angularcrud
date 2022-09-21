@@ -1,0 +1,9 @@
+<form #form="ngForm" (ngSubmit)="addEmployee()">
+	<label for="name">Nome:</label>
+	<input type="text" name="name" id="name" [(ngModel)]="addEmployeeRequest.name" />
+	<label for="age">Idade:</label>
+	<input type="number" min="0" name="age" id="age" [(ngModel)]="addEmployeeRequest.age" />
+	<label for="department">Setor:</label>
+	<input type="text" name="department" id="department" [(ngModel)]="addEmployeeRequest.department" />
+    <button type="submit">Salvar</button>
+</form>
